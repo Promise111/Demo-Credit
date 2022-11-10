@@ -1,10 +1,8 @@
 import { Global, Injectable } from '@nestjs/common';
-import { Knex } from 'knex';
-import { InjectConnection } from 'nest-knexjs';
 
 @Injectable()
 export class HelperService {
-  constructor(@InjectConnection() private readonly knex: Knex) {}
+  constructor() {}
 
   generateUniqueAccountNumber(id: number): string {
     const randomDigits: string = Math.random().toString().substr(2, 10);

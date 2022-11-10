@@ -121,6 +121,7 @@ export class AccountService {
         );
       }
 
+      // transaction to ensure ACID for cash transfer
       await this.knex.transaction(async (trx) => {
         await trx('wallets')
           .where({ id: authUser.id })
