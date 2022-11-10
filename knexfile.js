@@ -13,8 +13,8 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.HOST,
-      user: process.env.USERNAME,
-      password: process.env.PASSWORD,
+      user: process.env.DBUSERNAME,
+      password: process.env.DBPASSWORD,
       database: process.env.DATABASE,
     },
   },
@@ -23,8 +23,8 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.HOST,
-      user: process.env.USERNAME,
-      password: process.env.PASSWORD,
+      user: process.env.DBUSERNAME,
+      password: process.env.DBPASSWORD,
       database: process.env.DATABASE,
     },
     pool: {
@@ -40,8 +40,8 @@ module.exports = {
     client: 'mysql2',
     connection: {
       host: process.env.HOST,
-      user: process.env.USERNAME,
-      password: process.env.PASSWORD,
+      user: process.env.DBUSERNAME,
+      password: process.env.DBPASSWORD,
       database: process.env.DATABASE,
     },
     pool: {

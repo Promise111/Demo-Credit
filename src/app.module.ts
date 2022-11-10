@@ -17,9 +17,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           version: '5.7',
           connection: {
             host: config.get('HOST'),
-            port: config.get('PORT'),
-            user: config.get('USERNAME'),
-            password: config.get('PASSWORD'),
+            port: config.get('DBPORT'),
+            user: config.get('DBUSERNAME'),
+            password: config.get('DBPASSWORD'),
             database: config.get('DATABASE'),
           },
         },
