@@ -27,21 +27,21 @@ $ yarn start
 $ npm run start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# watch mode
+$ yarn test:watch
 ```
+   
+## Database Entity Relationship Diagram
+<img src="[https://nestjs.com/img/logo-small.svg](https://raw.githubusercontent.com/Promise111/Demo-Credit/main/demo_credit_ER_diagram.png)" width="200" alt="E-R diagram" />
 
 ## Support
 
