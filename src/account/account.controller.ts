@@ -2,8 +2,8 @@ import { AccountService } from './account.service';
 import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { JwtGuard } from '../auth/guard/jwt.guard';
-import { GetUser } from 'src/auth/decorator';
-import { User } from 'src/utils/constants';
+import { GetUser } from '../auth/decorator';
+import { User } from '../utils/constants';
 import { DepositDto, TransferDto } from './dto';
 
 @UseGuards(JwtGuard)

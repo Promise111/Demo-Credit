@@ -1,4 +1,4 @@
-import { HelperService } from './../utils/helper/helper.service';
+import { HelperService } from '../utils/helper/helper.service';
 import {
   BadRequestException,
   ConflictException,
@@ -51,9 +51,9 @@ export class AuthService {
       // create wallet
       await this.knex('wallets').insert({ user_id: user[0], account_number });
 
-      // return this.signToken(user[0], dto.email);
-      const { password, ...userDetails } = others;
-      return { message: 'Account created successfully', data: userDetails };
+      return this.signToken(user[0], dto.email);
+      // const { password, ...userDetails } = others;
+      // return { message: 'Account created successfully', data: userDetails };
     } catch (error) {
       throw error;
     }

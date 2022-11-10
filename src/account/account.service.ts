@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { Knex } from 'knex';
 import { InjectConnection } from 'nest-knexjs';
-import { User } from 'src/utils/constants';
+import { User } from '../utils/constants';
 import { DepositDto, TransferDto } from './dto';
 
 @Injectable()
