@@ -10,6 +10,16 @@ A simple implementation of a lending software (LaaS) created with Nest. Users ca
 ```bash
  $ git clone -b main https://github.com/Promise111/Demo-Credit.git
 ```
+   
+## Environment Variables
+```bash
+HOST=*****
+DBPORT=*****
+DBPASSWORD=*****
+DBUSERNAME=*****
+DATABASE=******
+JWT_SECRET=*******
+```
 
 ## Installation
 
