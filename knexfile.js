@@ -11,12 +11,6 @@ dotenv.config({ path: '.env' });
 module.exports = {
   development: {
     client: 'mysql2',
-    // connection: {
-    //   host: '127.0.0.1',
-    //   user: 'root',
-    //   password: 'WizDon1996',
-    //   database: 'democredit_db',
-    // },
     connection: {
       host: process.env.HOST,
       user: process.env.USERNAME,
@@ -27,12 +21,6 @@ module.exports = {
 
   staging: {
     client: 'mysql2',
-    // connection: {
-    //   host: '127.0.0.1',
-    //   user: 'root',
-    //   password: 'WizDon1996',
-    //   database: 'democredit_db',
-    // },
     connection: {
       host: process.env.HOST,
       user: process.env.USERNAME,
@@ -50,12 +38,6 @@ module.exports = {
 
   production: {
     client: 'mysql2',
-    // connection: {
-    //   host: '127.0.0.1',
-    //   user: 'root',
-    //   password: 'WizDon1996',
-    //   database: 'democredit_db',
-    // },
     connection: {
       host: process.env.HOST,
       user: process.env.USERNAME,
