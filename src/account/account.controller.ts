@@ -7,7 +7,7 @@ import { User } from '../utils/constants';
 import { DepositDto, TransferDto } from './dto';
 
 @UseGuards(JwtGuard)
-@Controller('account')
+@Controller('api/account')
 export class AccountController {
   constructor(private readonly accountService: AccountService) {}
 
