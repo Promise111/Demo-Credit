@@ -41,7 +41,7 @@ $ yarn test:watch
 ```
    
 ## Database Entity Relationship Diagram
-<img src="https://raw.githubusercontent.com/Promise111/Demo-Credit/main/demo_credit_ER_diagram.png" width="200" alt="E-R diagram" />
+<img width="500" src="https://raw.githubusercontent.com/Promise111/Demo-Credit/main/demo_credit_ER_diagram.png" width="200" alt="E-R diagram" />
 
 ## Support
 
