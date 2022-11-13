@@ -55,7 +55,20 @@ export class AccountService {
 
   async withdrawFromWallet(authUser: User, dto: DepositDto) {
     try {
+      const userWallet: any[] = await this.knex('wallets')
+        .where({ user_id: authUser.id })
+        .select('balance');
+      const userBalance: number = userWallet[0]['balance'];
       const amountInKobo = dto.amount * 100;
+      if (amountInKobo > userBalance) {
+        throw new BadRequestException({
+          message: 'Insufficient amount in wallet',
+          data: {
+            walletBalance: userBalance / 100,
+            withdrawalAmountRequested: amountInKobo / 100,
+          },
+        });
+      }
       await this.knex('wallets')
         .where({ id: authUser.id })
         .decrement('balance', amountInKobo);
@@ -82,7 +95,9 @@ export class AccountService {
 
   async transferFromWallet(authUser: User, dto: TransferDto) {
     try {
+      // converts amount to kobo as wallet balance is saved in kobo
       const amountInKobo = dto.amount * 100;
+      // get user balance
       const transferorWalletBalance: number = await this.knex('wallets')
         .where({ id: authUser.id })
         .select('balance');
